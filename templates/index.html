@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159158254-7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-159158254-7');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <title>音読アプリ チェックテスト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <style> 
+      #recordButton {font-family: 'M PLUS Rounded 1c', sans-serif}
+      #pauseButton {font-family: 'M PLUS Rounded 1c', sans-serif}
+      #stopButton {font-family: 'M PLUS Rounded 1c', sans-serif}
+      #text {width: 100%; height: 300px; font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 22px;}
+    </style>
+
+  </head>
+
+  <body>
+    <br>
+    <textarea id="text" name="text" placeholder="ここに３０秒以内に読める長さの英文を入力してください。" maxlength="3000" minlength="1"></textarea>
+    <div id="controls" style="text-align:center">
+  	 <button type="button" class="btn btn-success btn-lg" id="recordButton">録音開始</button>
+     <button type="button" class="btn btn-danger btn-lg" id="stopButton" disabled>停止</button>
+     <br>
+     <br>
+    </div>
+    <div id="formats"></div>
+    <!-- 消せませんでした -->
+
+    <ol id="recordingsList" style="list-style:none; text-align:center; padding:0; margin:0;"></ol>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	<script src="/static/js/recorder.js"></script>
+  	<script src="/static/js/app.js"></script>
+  </body>
+</html>
